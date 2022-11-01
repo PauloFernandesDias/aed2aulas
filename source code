@@ -1,0 +1,41 @@
+/******************************************************************************
+
+    Nome: Paulo Henrique Fernandes Dias
+	Atividade: exercicio 5 lista 4
+	Descrição: fazer um programa para calcular Fibonacci
+*******************************************************************************/
+#include <stdio.h>
+
+int Fibonacci(int n){
+    int a=0, b=1, c, i;
+    
+  if(n<=1){
+      c=0;
+  }
+  else if(n==2){
+      c=1;
+  }
+  else{
+    for(i=2;i<n;i++){
+        c=a+b;
+        a=b;
+        b=c;
+    }
+  }
+    return c;
+    
+}
+
+int main()
+{
+    int n;
+    
+    printf("insira o n-esimo numero para ser descoberto: ");
+        scanf("%d", &n);
+    
+    Fibonacci(n);
+    
+    printf("%d° = %d", n, Fibonacci(n));
+   
+}
+
